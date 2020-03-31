@@ -1279,12 +1279,11 @@ func (config GetStickerSetConfig) values() (url.Values, error) {
 }
 
 // DiceConfig contains information about a sendDice request.
-// Chattable interface
 type DiceConfig struct {
 	BaseChat
 }
 
-// values returns a url.Values representation of ForwardConfig.
+// values returns a url.Values representation of DiceConfig.
 func (config DiceConfig) values() (url.Values, error) {
 	v, err := config.BaseChat.values()
 	if err != nil {
@@ -1293,7 +1292,7 @@ func (config DiceConfig) values() (url.Values, error) {
 	return v, nil
 }
 
-// method returns Telegram API method name for sending Forward.
+// method returns Telegram API method name for sending Dice.
 func (config DiceConfig) method() string {
 	return "sendDice"
 }

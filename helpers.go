@@ -24,8 +24,7 @@ func NewMessage(chatID int64, text string) MessageConfig {
 func NewDice(chatID int64) DiceConfig {
 	return DiceConfig{
 		BaseChat: BaseChat{
-			ChatID:           chatID,
-			ReplyToMessageID: 0,
+			ChatID: chatID,
 		},
 	}
 }
