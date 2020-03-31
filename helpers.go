@@ -18,6 +18,18 @@ func NewMessage(chatID int64, text string) MessageConfig {
 	}
 }
 
+// NewDice creates a new DiceConfig.
+//
+// chatID is where to send it
+func NewDice(chatID int64) DiceConfig {
+	return DiceConfig{
+		BaseChat: BaseChat{
+			ChatID:           chatID,
+			ReplyToMessageID: 0,
+		},
+	}
+}
+
 // NewDeleteMessage creates a request to delete a message.
 func NewDeleteMessage(chatID int64, messageID int) DeleteMessageConfig {
 	return DeleteMessageConfig{

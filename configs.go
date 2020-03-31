@@ -1277,3 +1277,23 @@ func (config GetStickerSetConfig) values() (url.Values, error) {
 	v.Add("name", config.Name)
 	return v, nil
 }
+
+// DiceConfig contains information about a sendDice request.
+// Chattable interface
+type DiceConfig struct {
+	BaseChat
+}
+
+// values returns a url.Values representation of ForwardConfig.
+func (config DiceConfig) values() (url.Values, error) {
+	v, err := config.BaseChat.values()
+	if err != nil {
+		return v, err
+	}
+	return v, nil
+}
+
+// method returns Telegram API method name for sending Forward.
+func (config DiceConfig) method() string {
+	return "sendDice"
+}
