@@ -25,7 +25,6 @@ func NewDice(chatID int64) DiceConfig {
 	return DiceConfig{
 		BaseChat: BaseChat{
 			ChatID:           chatID,
-			ReplyToMessageID: 0,
 		},
 	}
 }
@@ -34,6 +33,7 @@ func NewDice(chatID int64) DiceConfig {
 func NewDeleteMessage(chatID int64, messageID int) DeleteMessageConfig {
 	return DeleteMessageConfig{
 		ChatID: chatID,
+		MessageID: messageID,
 	}
 }
 
