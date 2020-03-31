@@ -24,7 +24,7 @@ func NewMessage(chatID int64, text string) MessageConfig {
 func NewDice(chatID int64) DiceConfig {
 	return DiceConfig{
 		BaseChat: BaseChat{
-			ChatID:           chatID,
+			ChatID: chatID,
 		},
 	}
 }
@@ -32,7 +32,7 @@ func NewDice(chatID int64) DiceConfig {
 // NewDeleteMessage creates a request to delete a message.
 func NewDeleteMessage(chatID int64, messageID int) DeleteMessageConfig {
 	return DeleteMessageConfig{
-		ChatID: chatID,
+		ChatID:    chatID,
 		MessageID: messageID,
 	}
 }
