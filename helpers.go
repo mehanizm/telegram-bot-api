@@ -489,7 +489,7 @@ func NewInlineQueryResultMPEG4GIF(id, url string) InlineQueryResultMPEG4GIF {
 	}
 }
 
-// NewInlineQueryResultCachedPhoto create a new inline query with cached photo.
+// NewInlineQueryResultCachedMPEG4GIF create a new inline query with cached MPEG4 GIF.
 func NewInlineQueryResultCachedMPEG4GIF(id, MPEG4GifID string) InlineQueryResultCachedMpeg4Gif {
 	return InlineQueryResultCachedMpeg4Gif{
 		Type:   "mpeg4_gif",
